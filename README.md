@@ -1,6 +1,6 @@
 # Flask_Database_Practice
 
-A personal practice project API which undergoes database interaction using SQLAlchemy and Flask via Python.
+A personal practice project which undergoes database interaction using SQLAlchemy and Flask via Python.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ The database focuses on a simple table involving movies and the ratings. I wante
 
 Through the database, I used SQLAlchemy and Flask to read the database and also practiced data manipulation, insertion and deletion. 
 
-Finally, the API saves to a CSV file. The purpose of this is to gain practice and understanding of the real-wide practical use of exporting data like this into a common data file type(CSV).
+Finally, the code saves to a CSV file. The purpose of this is to gain practice and understanding of the real-wide practical use of exporting data like this into a common data file type(CSV).
 
 ## Goals
 
@@ -47,12 +47,19 @@ Finally, the API saves to a CSV file. The purpose of this is to gain practice an
 
 ## Challenges
 
-As this was a brand new project for me using technologies I have not been too familiar with practice wise. I have found a few things to be a struggle. From memory, some of these are:
+As this was a brand new project for me using technologies I have not been too familiar with practice wise. As such, few things were a struggle during this project. From memory, some of these are:
 
--
--
--
+- Issues with app_context(). This was a concept that I was not aware, whereas Flask requires application context to work with databases outside of a route. 
+- Foreign key and relationship establishment was a fairly complex process. In particular as the database relationship methods took a lot of unfamiliar parameters. 
+- Creating the method to import to a CSV was another foreign process that I did not know how to do.
+
+These challenges were a fantastic learning opportunity and a great way to expand my thinking across the greater codebase. 
 
 ## Future-Plans
 
-There are a few ideas that I have in mind for improvement and 
+There are a few ideas that I have in mind for improvement including additional features, optimisations and overhauls. 
+
+- Adjust the methods in sessions.py so that the functions are flexible to a passed table through the argument. At the moment, it is rigid in that it can only query the movie tables (e.g. add_movie). Introducing this feature will allow for flexibility and reduce the need to create more methods that caters to the Ratings table and any other tables created.
+- Add commentary in the code to document how the code works at numerous parts of the projects.
+- Identify optimisation opportunities and implement code to satisfy this objective.
+- Cleanup the Github folder so that the actual codes are in an src folder instead of the main directory.
