@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 # Troubleshooting identification on whether database exists
-db_path = 'C:\\Users\\Danny\\Desktop\\CodeProjects\\SQL\\ForCSVImport.db'
+# db_path = 'ForCSVImport.db'
 
 # if os.path.exists(db_path):
 #     print("Database exists")
@@ -11,7 +11,7 @@ db_path = 'C:\\Users\\Danny\\Desktop\\CodeProjects\\SQL\\ForCSVImport.db'
 
 
 app = Flask('__NAME__')
-app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\Danny\Desktop\CodeProjects\SQL\ForCSVImport.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///ForCSVImport.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 session = db.session
